@@ -109,11 +109,7 @@ RUN if [ $(getent group ${USER_GID}) ]; then echo "${USER_GID} exists"; else gro
     useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME && \
     # [Optional] Add sudo support for the non-root user
     echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME && \
-    chmod 0440 /etc/sudoers.d/$USERNAME && \
-    # add github ssh key
-    mkdir -p ~$USERNAME/.ssh/ && \
-    ssh-keyscan github.com >> ~$USERNAME/.ssh/known_hosts && \
-    chown -R $USER_UID.$USER_GID ~$USERNAME/.ssh
+    chmod 0440 /etc/sudoers.d/$USERNAME
 
 
 # Switch back to feelpp to avoid accidental container runs as root
