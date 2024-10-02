@@ -1,0 +1,7 @@
+.venv
+**/*.DS_Store
+**/*.ipynb_checkpoints
+
+doc/source/images/auto-generated/*
+node_modules/
+.vscode/
