@@ -21,7 +21,7 @@ RUN apt-get -qq update && \
     apt-get -y install coreutils tree wget gpg && \
     apt-get -y install python-is-python3 python3-venv python3-xvfbwrapper && \
     apt-get -y install nodejs nmap && \
-    apt-get -y install wget curl gpg sudo
+    apt-get -y install wget curl gpg sudo && \
     apt-get -y install mesa-utils libglx-mesa0 && \
     apt-get -y install libpci3 mesa-utils libegl1 libegl1-mesa-dev libxrender1 xvfb && \
     wget -qO - http://apt.feelpp.org/apt.gpg | apt-key add - && \
